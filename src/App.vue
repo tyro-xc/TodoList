@@ -1,11 +1,9 @@
 <script setup>
-import index from './components/index.vue'
-import father from './components/father.vue'
+import Home from "./components/Home.vue";
 </script>
 
 <template>
-
-    <father />
-    <index />
-
+  <Home />
 </template>
+
+<style scoped></style>
