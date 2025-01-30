@@ -2,9 +2,6 @@
   <el-container>
     <el-aside width="200px" height="100vh">
       <el-menu router>
-        <el-menu-item index="/">
-          <RouterLink to="/">Home</RouterLink>
-        </el-menu-item>
         <el-menu-item index="/TodoList">
           <RouterLink to="/TodoList">TodoList</RouterLink>
         </el-menu-item>
