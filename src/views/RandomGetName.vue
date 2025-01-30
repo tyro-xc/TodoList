@@ -79,7 +79,7 @@ body {
   margin-top: 0;
   margin: auto;
   width: 400px;
-  height: 600px;
+  height: 500px;
   border: 1px solid #ccc;
   border-radius: 2%;
 }
