@@ -5,13 +5,13 @@
         <el-menu-item index="/TodoList">
           <RouterLink to="/TodoList">TodoList</RouterLink>
         </el-menu-item>
-        <el-menu-item index="/confetti">
-          <RouterLink to="/confetti">confetti</RouterLink>
-        </el-menu-item>
+
         <el-menu-item index="/testButton">
           <RouterLink to="/testButton">testButton</RouterLink>
         </el-menu-item>
-
+        <el-menu-item index="/RandomGetName">
+          <RouterLink to="/RandomGetName">RandomGetName</RouterLink>
+        </el-menu-item>
         <el-menu-item index="/testColor">
           <RouterLink to="/testColor">testColor</RouterLink>
         </el-menu-item>
@@ -29,21 +29,29 @@
 <script setup></script>
 
 <style scoped>
-* {
+.outer {
   margin: 0;
   padding: 0;
 }
 .el-aside {
-  background-color: rgb(51.2, 126.4, 204);
+  /* background-color: rgb(51.2, 126.4, 204); */
+  background-color: #001529;
   height: 100vh;
 }
 
 .el-header {
-  background-color: rgb(115.2, 117.6, 122.4);
+  /* background-color: rgb(115.2, 117.6, 122.4); */
+  background-color: rgb(51.2, 126.4, 204);
 }
 
-/* .el-main{background-color: rgb(159.5, 206.5, 255);} */
+.el-main {
+  /* background-color: rgb(159.5, 206.5, 255); */
+  /* background-color: rgb(243, 233, 215); */
+}
 .el-menu {
-  background-color: rgb(197.7, 225.9, 255);
+  background-color: #001529;
+}
+.el-menu-item {
+  background-color: rgb(234, 234, 234);
 }
 </style>

@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/components/Home.vue";
+// import Home from "@/components/Home.vue";
+import confetti from "../views/confetti.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // {
-    //   path: "/",
-    //   name: "Home",
-    //   component: Home,
-    // },
+    {
+      path: "/",
+      name: "Confetti",
+      component: confetti,
+    },
     {
       path: "/testColor",
       name: "testColor",
@@ -28,6 +29,11 @@ const router = createRouter({
       path: "/TodoList",
       name: "TodoList",
       component: () => import("../views/TodoList.vue"),
+    },
+    {
+      path: "/RandomGetName",
+      name: "RandomGetName",
+      component: () => import("../views/RandomGetName.vue"),
     },
   ],
 });
