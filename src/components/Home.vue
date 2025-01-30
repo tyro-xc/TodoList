@@ -14,7 +14,9 @@
         <el-menu-item index="/testButton">
           <RouterLink to="/testButton">testButton</RouterLink>
         </el-menu-item>
-
+        <el-menu-item index="/RandomGetName">
+          <RouterLink to="/RandomGetName">RandomGetName</RouterLink>
+        </el-menu-item>
         <el-menu-item index="/testColor">
           <RouterLink to="/testColor">testColor</RouterLink>
         </el-menu-item>
@@ -47,6 +49,10 @@
 
 /* .el-main{background-color: rgb(159.5, 206.5, 255);} */
 .el-menu {
+  background-color: rgb(197.7, 225.9, 255);
+  /* background-color:#40a9ff; */
+}
+.el-menu-item {
   background-color: rgb(197.7, 225.9, 255);
 }
 </style>
