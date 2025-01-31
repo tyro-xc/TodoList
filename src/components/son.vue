@@ -8,6 +8,5 @@ import {defineProps} from 'vue'
 
 const props = defineProps({
     num:Number,
-
 })
 </script>

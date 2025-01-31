@@ -34,6 +34,14 @@ const router = createRouter({
       path: "/RandomGetName",
       name: "RandomGetName",
       component: () => import("../views/RandomGetName.vue"),
+    },{
+      path: "/debounce",
+      name: "debounce",
+      component: () => import("../views/debounce.vue"),
+    },{
+      path: "/SearchGithubName",
+      name: "SearchGithubName",
+      component: () => import("../views/SearchGithubName.vue"),
     },
   ],
 });
