@@ -43,6 +43,11 @@ const router = createRouter({
       name: "SearchGithubName",
       component: () => import("../views/SearchGithubName.vue"),
     },
+    {
+      path:"/abc",
+      name:"abc",
+      component:()=>import("../views/abc.vue")
+    }
   ],
 });
 

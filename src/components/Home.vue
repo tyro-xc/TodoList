@@ -22,6 +22,11 @@
         <el-menu-item index="/SearchGithubName">
           <RouterLink to="/SearchGithubName">SearchGithubName</RouterLink>
         </el-menu-item>
+
+        <el-menu-item index="/abc">
+          <RouterLink to="/abc">abc</RouterLink>
+        </el-menu-item>
+
       </el-menu>
     </el-aside>
     <el-container>

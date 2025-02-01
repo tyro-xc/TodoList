@@ -16,4 +16,4 @@ watch(input, (newValue, oldValue) => {
 
 </script>
 
-<style scoped></style>, watch
+<style scoped></style>
