@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-aside width="200px" height="100vh">
+    <el-aside width="20%" height="100vh">
       <el-menu router>
         <el-menu-item index="/TodoList">
           <RouterLink to="/TodoList">TodoList</RouterLink>
@@ -26,7 +26,6 @@
         <el-menu-item index="/abc">
           <RouterLink to="/abc">abc</RouterLink>
         </el-menu-item>
-
       </el-menu>
     </el-aside>
     <el-container>

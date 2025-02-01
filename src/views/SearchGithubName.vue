@@ -12,8 +12,8 @@
       :key="item.id"
     >
       <a :href="item.html_url">{{ item.login }}</a>
-      <img :src="item.avatar_url" alt="" width="100%" />
-      <p>{{ item.id }}</p>
+      <img :src="item.avatar_url" alt="" width="80%" height="80%" />
+      <!-- <p>{{ item.id }}</p> -->
     </div>
   </div>
 </template>
@@ -29,8 +29,11 @@ const search = async function () {
     .then((response) => response.json())
     .then((data) => {
       textarea.value = JSON.stringify(data, null, 2);
-      console.table(data);
+      console.table(data.items);
       arr.value = data.items; // 使用 .value 来更新响应式数组
     });
 };
 </script>
+<!-- 
+12
+3 -->
