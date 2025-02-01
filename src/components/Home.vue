@@ -2,30 +2,14 @@
   <el-container>
     <el-aside width="20%" height="100vh">
       <el-menu router>
-        <el-menu-item index="/TodoList">
-          <RouterLink to="/TodoList">TodoList</RouterLink>
-        </el-menu-item>
+        <el-menu-item index="/TodoList"> TodoList </el-menu-item>
+        <el-menu-item index="/testButton"> testButton </el-menu-item>
+        <el-menu-item index="/RandomGetName"> RandomGetName </el-menu-item>
+        <el-menu-item index="/testColor"> testColor </el-menu-item>
+        <el-menu-item index="/debounce"> debounce </el-menu-item>
+        <el-menu-item index="/SearchGithubName">SearchGithubName </el-menu-item>
 
-        <el-menu-item index="/testButton">
-          <RouterLink to="/testButton">testButton</RouterLink>
-        </el-menu-item>
-        <el-menu-item index="/RandomGetName">
-          <RouterLink to="/RandomGetName">RandomGetName</RouterLink>
-        </el-menu-item>
-        <el-menu-item index="/testColor">
-          <RouterLink to="/testColor">testColor</RouterLink>
-        </el-menu-item>
-        <el-menu-item index="/debounce">
-          <RouterLink to="/debounce">debounce</RouterLink>
-        </el-menu-item>
-
-        <el-menu-item index="/SearchGithubName">
-          <RouterLink to="/SearchGithubName">SearchGithubName</RouterLink>
-        </el-menu-item>
-
-        <el-menu-item index="/abc">
-          <RouterLink to="/abc">abc</RouterLink>
-        </el-menu-item>
+        <el-menu-item index="/abc"> abc</el-menu-item>
       </el-menu>
     </el-aside>
     <el-container>
@@ -52,13 +36,7 @@
 }
 
 .el-header {
-  /* background-color: rgb(115.2, 117.6, 122.4); */
   background-color: rgb(51.2, 126.4, 204);
-}
-
-.el-main {
-  /* background-color: rgb(159.5, 206.5, 255); */
-  /* background-color: rgb(243, 233, 215); */
 }
 
 .el-menu {
@@ -66,6 +44,7 @@
 }
 
 .el-menu-item {
-  background-color: rgb(234, 234, 234);
+  color: rgb(0, 200, 164);
+  /* background-color: ; */
 }
 </style>
