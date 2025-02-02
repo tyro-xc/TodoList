@@ -5,6 +5,7 @@
   <div class="container">
     <div class="box" v-for="i in 10"></div>
   </div>
+  
 </template>
 
 <script setup>

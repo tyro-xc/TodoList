@@ -47,7 +47,12 @@ const router = createRouter({
       path:"/abc",
       name:"abc",
       component:()=>import("../views/abc.vue")
-    }
+    },
+    {
+      path:"/photos",
+      name:"photos",
+      component:()=>import("../views/photos.vue")
+    },
   ],
 });
 
