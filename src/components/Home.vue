@@ -10,6 +10,13 @@
         <el-menu-item index="/SearchGithubName">SearchGithubName </el-menu-item>
 
         <el-menu-item index="/abc"> abc</el-menu-item>
+        <el-sub-menu index="1">
+          <template #title style="--el-menu-text-color: white"
+            >testPinia</template
+          >
+          <el-menu-item index="/search">search</el-menu-item>
+          <el-menu-item index="list">list</el-menu-item>
+        </el-sub-menu>
       </el-menu>
     </el-aside>
     <el-container>

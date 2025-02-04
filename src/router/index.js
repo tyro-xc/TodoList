@@ -34,20 +34,30 @@ const router = createRouter({
       path: "/RandomGetName",
       name: "RandomGetName",
       component: () => import("../views/RandomGetName.vue"),
-    },{
+    },
+    {
       path: "/debounce",
       name: "debounce",
       component: () => import("../views/debounce.vue"),
-    },{
+    },
+    {
       path: "/SearchGithubName",
       name: "SearchGithubName",
       component: () => import("../views/SearchGithubName.vue"),
     },
     {
-      path:"/abc",
-      name:"abc",
-      component:()=>import("../views/abc.vue")
-    }
+      path: "/abc",
+      name: "abc",
+      component: () => import("../views/abc.vue"),
+    },
+    {
+      path: "/list",
+      component: () => import("../views/testPinia/List.vue"),
+    },
+    {
+      path: "/search",
+      component: () => import("../views/testPinia/Search.vue"),
+    },
   ],
 });
 
