@@ -3,7 +3,20 @@ import Home from "./components/Home.vue";
 </script>
 
 <template>
-  <Home />
+  <div class="main">
+    <Home />
+  </div>
 </template>
 
-<style scoped></style>
+<style>
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+</style>

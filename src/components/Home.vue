@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <el-container>
     <el-aside width="20%" height="100vh">
       <el-menu router>
@@ -19,18 +20,40 @@
         </el-sub-menu>
       </el-menu>
     </el-aside>
+=======
+  <div class="main">
+>>>>>>> 3f1313c2226bb39514bafa33d6ce727e714221b2
     <el-container>
-      <el-header>header</el-header>
-      <el-main>
-        <RouterView />
-      </el-main>
+      <el-aside height="100vh">
+        <el-menu router>
+          <el-menu-item index="/TodoList"> TodoList </el-menu-item>
+          <el-menu-item index="/testButton"> testButton </el-menu-item>
+          <el-menu-item index="/RandomGetName"> RandomGetName </el-menu-item>
+          <el-menu-item index="/testColor"> testColor </el-menu-item>
+          <el-menu-item index="/debounce"> debounce </el-menu-item>
+          <el-menu-item index="/SearchGithubName">SearchGithubName </el-menu-item>
+
+          <el-menu-item index="/abc"> abc</el-menu-item>
+          <el-menu-item index="/photos"> photos</el-menu-item>
+        </el-menu>
+      </el-aside>
+      <el-container>
+        <el-header>header</el-header>
+        <el-main>
+          <RouterView />
+        </el-main>
+      </el-container>
     </el-container>
-  </el-container>
+  </div>
 </template>
 
 <script setup></script>
 
 <style scoped>
+.el-main {
+  height: 100vh;
+}
+
 .outer {
   margin: 0;
   padding: 0;
@@ -39,6 +62,8 @@
 .el-aside {
   /* background-color: rgb(51.2, 126.4, 204); */
   background-color: #001529;
+  width: 20%;
+  min-width: 200px;
   height: 100vh;
 }
 
