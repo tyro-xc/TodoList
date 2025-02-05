@@ -46,7 +46,6 @@ const router = createRouter({
       component: () => import("../views/SearchGithubName.vue"),
     },
     {
-<<<<<<< HEAD
       path: "/abc",
       name: "abc",
       component: () => import("../views/abc.vue"),
@@ -58,16 +57,11 @@ const router = createRouter({
     {
       path: "/search",
       component: () => import("../views/testPinia/Search.vue"),
-=======
-      path:"/abc",
-      name:"abc",
-      component:()=>import("../views/abc.vue")
     },
     {
       path:"/photos",
       name:"photos",
       component:()=>import("../views/photos.vue")
->>>>>>> 3f1313c2226bb39514bafa33d6ce727e714221b2
     },
   ],
 });
