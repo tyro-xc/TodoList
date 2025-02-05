@@ -1,28 +1,5 @@
 <template>
-<<<<<<< HEAD
-  <el-container>
-    <el-aside width="20%" height="100vh">
-      <el-menu router>
-        <el-menu-item index="/TodoList"> TodoList </el-menu-item>
-        <el-menu-item index="/testButton"> testButton </el-menu-item>
-        <el-menu-item index="/RandomGetName"> RandomGetName </el-menu-item>
-        <el-menu-item index="/testColor"> testColor </el-menu-item>
-        <el-menu-item index="/debounce"> debounce </el-menu-item>
-        <el-menu-item index="/SearchGithubName">SearchGithubName </el-menu-item>
-
-        <el-menu-item index="/abc"> abc</el-menu-item>
-        <el-sub-menu index="1">
-          <template #title style="--el-menu-text-color: white"
-            >testPinia</template
-          >
-          <el-menu-item index="/search">search</el-menu-item>
-          <el-menu-item index="list">list</el-menu-item>
-        </el-sub-menu>
-      </el-menu>
-    </el-aside>
-=======
   <div class="main">
->>>>>>> 3f1313c2226bb39514bafa33d6ce727e714221b2
     <el-container>
       <el-aside height="100vh">
         <el-menu router>
@@ -34,6 +11,11 @@
           <el-menu-item index="/SearchGithubName">SearchGithubName </el-menu-item>
 
           <el-menu-item index="/abc"> abc</el-menu-item>
+          <el-sub-menu index="1">
+            <template #title style="--el-menu-text-color: white">testPinia</template>
+            <el-menu-item index="/search">search</el-menu-item>
+            <el-menu-item index="list">list</el-menu-item>
+          </el-sub-menu>
           <el-menu-item index="/photos"> photos</el-menu-item>
         </el-menu>
       </el-aside>

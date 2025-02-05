@@ -1,19 +1,15 @@
 <template>
 
     <div>
-        <!-- 使用 v-for 循环生成 10 个 img 标签 -->
         <img v-for="i in 30" :key="i" :src="getRandomImageUrl()" alt="" />
     </div>
 </template>
 
 <script setup>
-// 定义一个函数，用于生成随机的图片 URL
 function getRandomImageUrl() {
-    // 生成一个随机数作为图片的宽度和高度
-    const width = Math.floor(Math.random() * 500) + 100; // 随机宽度在 100 到 600 之间
-    const height = Math.floor(Math.random() * 500) + 100; // 随机高度在 100 到 600 之间
+    const width = Math.floor(Math.random() * 500) + 100; 
+    const height = Math.floor(Math.random() * 500) + 100;
 
-    // 构造图片 URL，使用 Picsum API 来获取随机图片
     return `https://picsum.photos/${width}/${height}`;
 }
 </script>
