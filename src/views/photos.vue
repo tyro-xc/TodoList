@@ -9,7 +9,6 @@
 function getRandomImageUrl() {
     const width = Math.floor(Math.random() * 500) + 100; 
     const height = Math.floor(Math.random() * 500) + 100;
-
     return `https://picsum.photos/${width}/${height}`;
 }
 </script>
