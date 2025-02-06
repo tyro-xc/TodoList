@@ -63,6 +63,11 @@ const router = createRouter({
       name:"photos",
       component:()=>import("../views/photos.vue")
     },
+    {
+      path:"/testFloat",
+      name:"testFloat",
+      component:()=>import("../views/testFloat.vue")
+    },
   ],
 });
 

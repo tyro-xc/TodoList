@@ -9,8 +9,6 @@
 </template>
 
 <script setup>
-// import Search from "../../views/testPinia/Search.vue";
-// import Search from "./testPinia/Search.vue";
 </script>
 
 <style scoped>

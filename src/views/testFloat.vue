@@ -1,0 +1,148 @@
+<template>
+    <div class="container">
+        <div class="header clearfix">
+            <div class="logo leftFix">logo</div>
+            <div class="banner1 leftFix">banner1</div>
+            <div class="banner2 leftFix">banner2</div>
+        </div>
+        <div class="menu">
+            menu
+        </div>
+        <div class="content clearfix">
+            <div class="leftBox leftFix clearfix">
+                <div class="leftTop clearfix">
+                    <div class="box1 leftFix">栏目一</div>
+                    <div class="box2 leftFix">栏目二</div>
+                </div>
+                <div class="leftBottom clearfix">
+                    <div class="box1 leftFix">栏目一</div>
+                    <div class="box2 leftFix">栏目二</div>
+                    <div class="box3 leftFix">栏目三</div>
+                    <div class="box4 leftFix">栏目四</div>
+                </div>
+            </div>
+            <div class="rightBox rightFix">
+                <div>栏目七</div>
+                <div>栏目八</div>
+                <div>栏目九</div>
+            </div>
+        </div>
+        <div class="footer">
+            footer
+        </div>
+    </div>
+</template>
+
+<style scoped>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 960px;
+    /* background-image: linear-gradient(to right, red, yellow); */
+
+    /* background-color: pink; */
+}
+
+.leftFix {
+    float: left;
+}
+
+.rightFix {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header {
+    width: 960px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.header div {
+    background-color: #C0C0C0;
+}
+
+.header div:nth-child(2) {
+    margin: 0 10px;
+}
+
+.logo,
+.banner1,
+.banner2 {
+    height: 80px;
+}
+
+.logo,
+.banner2 {
+    width: 200px;
+}
+
+.banner1 {
+    width: 540px;
+}
+
+.menu {
+    width: 960px;
+    height: 30px;
+    background-color: #C0C0C0;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 30px;
+}
+
+.leftTop {
+    margin-bottom: 10px;
+}
+
+.leftTop div {
+    border: 1px solid #a9a1a1;
+    width: 368px;
+    height: 198px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 198px;
+}
+
+.leftBottom .box1,
+.box2,
+.box3,
+.box4 {
+    border: 1px solid #a9a1a1;
+    width: 178px;
+    height: 198px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 198px;
+}
+
+.rightBox div {
+    border: 1px solid #a9a1a1;
+    width: 198px;
+    height: 128px;
+    text-align: center;
+    line-height: 128px;
+}
+
+.rightBox div:nth-child(2) {
+    margin: 10px 0;
+}
+
+.footer {
+    width: 960px;
+    height: 60px;
+    background-color: #C0C0C0;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 10px;
+}
+</style>

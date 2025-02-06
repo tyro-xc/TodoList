@@ -17,6 +17,7 @@
             <el-menu-item index="list">list</el-menu-item>
           </el-sub-menu>
           <el-menu-item index="/photos"> photos</el-menu-item>
+          <el-menu-item index="/testFloat"> testFloat</el-menu-item>
         </el-menu>
       </el-aside>
       <el-container>
