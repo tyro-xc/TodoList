@@ -68,6 +68,11 @@ const router = createRouter({
       name:"testFloat",
       component:()=>import("../views/testFloat.vue")
     },
+    {
+      path:"/lyrics",
+      name:"lyrics",
+      component:()=>import("../views/lyrics.vue")
+    },
   ],
 });
 

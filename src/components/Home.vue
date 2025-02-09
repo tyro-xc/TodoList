@@ -18,6 +18,7 @@
           </el-sub-menu>
           <el-menu-item index="/photos"> photos</el-menu-item>
           <el-menu-item index="/testFloat"> testFloat</el-menu-item>
+          <el-menu-item index="/lyrics"> lyrics</el-menu-item>
         </el-menu>
       </el-aside>
       <el-container>
@@ -34,7 +35,8 @@
 
 <style scoped>
 .el-main {
-  height: 100vh;
+  height: 90vh;
+  padding: 0px;
 }
 
 .outer {
@@ -52,6 +54,7 @@
 
 .el-header {
   background-color: rgb(51.2, 126.4, 204);
+  height: 10vh;
 }
 
 .el-menu {
