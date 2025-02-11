@@ -6,11 +6,11 @@ import Home from "./components/Home.vue";
   <div class="main">
     <Home />
   </div>
-   
+
 </template>
 
 <style>
-.main {
+/* .main {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -19,5 +19,5 @@ import Home from "./components/Home.vue";
   right: 0;
   bottom: 0;
   width: 100%;
-}
+} */
 </style>

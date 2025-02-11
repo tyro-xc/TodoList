@@ -3,6 +3,9 @@ import { ref } from "vue"
 const numR = ref(0)
 const numG = ref(200)
 const numB = ref(0)
+const fn=()=>{
+  document.querySelector("html").requestFullscreen()
+}
 </script>
 
 <template>
@@ -14,6 +17,9 @@ const numB = ref(0)
     :style="{ backgroundColor: `rgb(${numR},${numG},${numB})` }">
     123
   </div>
-
+<button @click="fn">fullScreen</button>
 </template>
 
+<style scoped>
+
+</style>

@@ -12,17 +12,21 @@
 
           <el-menu-item index="/abc"> abc</el-menu-item>
           <el-sub-menu index="1">
-            <template #title style="--el-menu-text-color: white">testPinia</template>
+            <template #title >testPinia</template>
             <el-menu-item index="/search">search</el-menu-item>
             <el-menu-item index="list">list</el-menu-item>
           </el-sub-menu>
           <el-menu-item index="/photos"> photos</el-menu-item>
           <el-menu-item index="/testFloat"> testFloat</el-menu-item>
           <el-menu-item index="/lyrics"> lyrics</el-menu-item>
+          <el-menu-item index="/login"> login</el-menu-item>
+          <!-- <el-menu-item index="/iframe"> iframe</el-menu-item> -->
         </el-menu>
       </el-aside>
       <el-container>
-        <el-header>header</el-header>
+        <el-header>header
+          <el-text size="large" type="success">{{time}}</el-text>
+        </el-header>
         <el-main>
           <RouterView />
         </el-main>
@@ -31,14 +35,28 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref,onMounted,onBeforeUnmount } from "vue";
+import {getCurrentTime} from "@/util/time.js"
+const time=ref(getCurrentTime())
+onMounted(() => {
+  const intervalId = setInterval(() => {
+    time.value = getCurrentTime(); // 更新 time 的值
+  }, 1000);
+
+})
+onBeforeUnmount(()=>{
+  clearInterval(intervalId);
+})
+</script>
 
 <style scoped>
 .el-main {
-  height: 90vh;
+  height: 95vh;
   padding: 0px;
 }
 
+ 
 .outer {
   margin: 0;
   padding: 0;
@@ -54,7 +72,10 @@
 
 .el-header {
   background-color: rgb(51.2, 126.4, 204);
-  height: 10vh;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .el-menu {

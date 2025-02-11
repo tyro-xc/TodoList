@@ -73,7 +73,20 @@ const router = createRouter({
       name:"lyrics",
       component:()=>import("../views/lyrics.vue")
     },
+
+    {
+      path:"/login",
+      name:"login",
+      component:()=>import("../views/login.vue")
+    },
+    {
+      path:"/iframe",
+      name:"iframe",
+      component:()=>import("../views/iframe.vue")
+    },
   ],
 });
 
 export default router;
+
+

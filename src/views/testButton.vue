@@ -1,7 +1,7 @@
 <template>
 
-    <div v-for="i in 10">
-     <button v-for=" j in 10"></button>
+    <div v-for="i in 10" :key="i">
+     <button v-for=" j in 10" :key="j"></button>
     </div>
    
 </template>

@@ -7,7 +7,7 @@
 
 <script setup>
 function getRandomImageUrl() {
-    const width = Math.floor(Math.random() * 500) + 100; 
+    const width = Math.floor(Math.random() * 500) + 100;
     const height = Math.floor(Math.random() * 500) + 100;
     return `https://picsum.photos/${width}/${height}`;
 }
@@ -16,13 +16,14 @@ function getRandomImageUrl() {
 <style scoped>
 div {
     column-count: 6;
-    max-height: 100vh;
+    
 }
 
 img {
     width: 100%;
     height: 100%;
     border-radius: 12px;
+    object-fit: cover;
 }
 
 img:hover {
