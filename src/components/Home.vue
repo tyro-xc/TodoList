@@ -2,30 +2,34 @@
   <div class="main">
     <el-container>
       <el-aside height="100vh">
-        <el-menu router>
-          <el-menu-item index="/TodoList"> TodoList </el-menu-item>
-          <el-menu-item index="/testButton"> testButton </el-menu-item>
-          <el-menu-item index="/RandomGetName"> RandomGetName </el-menu-item>
-          <el-menu-item index="/testColor"> testColor </el-menu-item>
-          <el-menu-item index="/debounce"> debounce </el-menu-item>
-          <el-menu-item index="/SearchGithubName">SearchGithubName </el-menu-item>
+        <el-scrollbar>
+          <el-menu router>
+            <el-menu-item index="/TodoList"> TodoList </el-menu-item>
+            <el-menu-item index="/testButton"> testButton </el-menu-item>
+            <el-menu-item index="/RandomGetName"> RandomGetName </el-menu-item>
+            <el-menu-item index="/testColor"> testColor </el-menu-item>
+            <el-menu-item index="/debounce"> debounce </el-menu-item>
+            <el-menu-item index="/SearchGithubName"
+              >SearchGithubName</el-menu-item
+            >
 
-          <el-menu-item index="/abc"> abc</el-menu-item>
-          <el-sub-menu index="1">
-            <template #title >testPinia</template>
-            <el-menu-item index="/search">search</el-menu-item>
-            <el-menu-item index="list">list</el-menu-item>
-          </el-sub-menu>
-          <el-menu-item index="/photos"> photos</el-menu-item>
-          <el-menu-item index="/testFloat"> testFloat</el-menu-item>
-          <el-menu-item index="/lyrics"> lyrics</el-menu-item>
-          <el-menu-item index="/login"> login</el-menu-item>
-          <!-- <el-menu-item index="/iframe"> iframe</el-menu-item> -->
-        </el-menu>
+            <el-menu-item index="/abc"> abc</el-menu-item>
+            <el-sub-menu index="1">
+              <template #title>testPinia</template>
+              <el-menu-item index="/search">search</el-menu-item>
+              <el-menu-item index="list">list</el-menu-item>
+            </el-sub-menu>
+            <el-menu-item index="/photos"> photos</el-menu-item>
+            <el-menu-item index="/testFloat"> testFloat</el-menu-item>
+            <el-menu-item index="/lyrics"> lyrics</el-menu-item>
+            <el-menu-item index="/login"> login</el-menu-item>
+          </el-menu>
+        </el-scrollbar>
       </el-aside>
       <el-container>
-        <el-header>header
-          <el-text size="large" type="success">{{time}}</el-text>
+        <el-header>
+          <button @click="fn">toggleScreen</button>
+          <el-text size="large" type="success">{{ time }}</el-text>
         </el-header>
         <el-main>
           <RouterView />
@@ -36,18 +40,25 @@
 </template>
 
 <script setup>
-import { ref,onMounted,onBeforeUnmount } from "vue";
-import {getCurrentTime} from "@/util/time.js"
-const time=ref(getCurrentTime())
+import { ref, onMounted, onBeforeUnmount } from "vue";
+import { getCurrentTime } from "@/util/time.js";
+const time = ref(getCurrentTime());
+const isFullScreen = ref(false);
+
+const fn = () => {
+  const el = document.documentElement;
+  document.fullscreenElement
+    ? document.exitFullscreen()
+    : el.requestFullscreen();
+};
 onMounted(() => {
   const intervalId = setInterval(() => {
     time.value = getCurrentTime(); // 更新 time 的值
   }, 1000);
-
-})
-onBeforeUnmount(()=>{
+});
+onBeforeUnmount(() => {
   clearInterval(intervalId);
-})
+});
 </script>
 
 <style scoped>
@@ -56,7 +67,6 @@ onBeforeUnmount(()=>{
   padding: 0px;
 }
 
- 
 .outer {
   margin: 0;
   padding: 0;
