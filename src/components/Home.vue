@@ -28,7 +28,8 @@
       </el-aside>
       <el-container>
         <el-header>
-          <button @click="fn">toggleScreen</button>
+          <!-- <button >toggleFullScreen</button> -->
+          <el-button @click="fn" type="success">toggleFullScreen</el-button>
           <el-text size="large" type="success">{{ time }}</el-text>
         </el-header>
         <el-main>
@@ -67,10 +68,6 @@ onBeforeUnmount(() => {
   padding: 0px;
 }
 
-.outer {
-  margin: 0;
-  padding: 0;
-}
 
 .el-aside {
   /* background-color: rgb(51.2, 126.4, 204); */
