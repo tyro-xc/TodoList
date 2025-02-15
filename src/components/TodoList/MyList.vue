@@ -30,6 +30,7 @@
     height: auto;
     margin: 10px 0 0 20px;
     border-radius: 2px;
+    overflow: auto;
   }
   </style>
   

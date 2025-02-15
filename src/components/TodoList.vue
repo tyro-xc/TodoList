@@ -61,5 +61,6 @@ watch(
   width: 400px;
   height: 500px;
   border-radius: 3px;
+  /* overflow: auto; */
 }
 </style>

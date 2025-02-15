@@ -7,12 +7,12 @@
             <el-menu-item index="/TodoList"> TodoList </el-menu-item>
             <el-menu-item index="/testButton"> testButton </el-menu-item>
             <el-menu-item index="/RandomGetName"> RandomGetName </el-menu-item>
+            <el-menu-item index="/table"> table </el-menu-item>
             <el-menu-item index="/testColor"> testColor </el-menu-item>
             <el-menu-item index="/debounce"> debounce </el-menu-item>
             <el-menu-item index="/SearchGithubName"
               >SearchGithubName</el-menu-item
             >
-
             <el-menu-item index="/abc"> abc</el-menu-item>
             <el-sub-menu index="1">
               <template #title>testPinia</template>
@@ -22,13 +22,11 @@
             <el-menu-item index="/photos"> photos</el-menu-item>
             <el-menu-item index="/testFloat"> testFloat</el-menu-item>
             <el-menu-item index="/lyrics"> lyrics</el-menu-item>
-            <el-menu-item index="/login"> login</el-menu-item>
           </el-menu>
         </el-scrollbar>
       </el-aside>
       <el-container>
         <el-header>
-          <!-- <button >toggleFullScreen</button> -->
           <el-button @click="fn" type="success">toggleFullScreen</el-button>
           <el-text size="large" type="success">{{ time }}</el-text>
         </el-header>
@@ -44,30 +42,27 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { getCurrentTime } from "@/util/time.js";
 const time = ref(getCurrentTime());
-const isFullScreen = ref(false);
 
 const fn = () => {
-  const el = document.documentElement;
   document.fullscreenElement
     ? document.exitFullscreen()
-    : el.requestFullscreen();
+    : document.documentElement.requestFullscreen();
 };
 onMounted(() => {
   const intervalId = setInterval(() => {
     time.value = getCurrentTime(); // 更新 time 的值
   }, 1000);
 });
-onBeforeUnmount(() => {
-  clearInterval(intervalId);
-});
+// onBeforeUnmount(() => {
+//   clearInterval(intervalId);
+// });
 </script>
 
 <style scoped>
 .el-main {
   height: 95vh;
-  padding: 0px;
+  /* padding: 0px; */
 }
-
 
 .el-aside {
   /* background-color: rgb(51.2, 126.4, 204); */
@@ -91,6 +86,5 @@ onBeforeUnmount(() => {
 
 .el-menu-item {
   color: rgb(0, 200, 164);
-  /* background-color: ; */
 }
 </style>
