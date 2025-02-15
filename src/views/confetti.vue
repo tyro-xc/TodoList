@@ -1,14 +1,14 @@
 <script setup>
-import JSConfetti from 'js-confetti'
-const confetti = new JSConfetti()
+import JSConfetti from "js-confetti";
+const confetti = new JSConfetti();
 function showConfetti() {
-  confetti.addConfetti()
+  confetti.addConfetti();
 }
-showConfetti()
+showConfetti();
 </script>
 
 <template>
-  <h1 @click="showConfetti">🎉 Congratulations!</h1>
+  <h1 @click="showConfetti">🎉 Welcome!</h1>
 </template>
 
 <style>
