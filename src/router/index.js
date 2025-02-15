@@ -1,9 +1,15 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+} from "vue-router";
 // import Home from "@/components/Home.vue";
 import confetti from "../views/confetti.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(
+    import.meta.env.BASE_URL
+  ),
   routes: [
     {
       path: "/",
@@ -13,80 +19,107 @@ const router = createRouter({
     {
       path: "/testColor",
       name: "testColor",
-      component: () => import("../views/testColor.vue"),
+      component: () =>
+        import(
+          "../views/testColor.vue"
+        ),
     },
     {
       path: "/testButton",
       name: "testButton",
-      component: () => import("../views/testButton.vue"),
+      component: () =>
+        import(
+          "../views/testButton.vue"
+        ),
     },
     {
       path: "/confetti",
       name: "confetti",
-      component: () => import("../views/confetti.vue"),
+      component: () =>
+        import("../views/confetti.vue"),
     },
     {
       path: "/TodoList",
       name: "TodoList",
-      component: () => import("../views/TodoList.vue"),
+      component: () =>
+        import("../views/TodoList.vue"),
     },
     {
       path: "/RandomGetName",
       name: "RandomGetName",
-      component: () => import("../views/RandomGetName.vue"),
+      component: () =>
+        import(
+          "../views/RandomGetName.vue"
+        ),
     },
     {
       path: "/debounce",
       name: "debounce",
-      component: () => import("../views/debounce.vue"),
+      component: () =>
+        import("../views/debounce.vue"),
     },
     {
       path: "/SearchGithubName",
       name: "SearchGithubName",
-      component: () => import("../views/SearchGithubName.vue"),
+      component: () =>
+        import(
+          "../views/SearchGithubName.vue"
+        ),
     },
     {
       path: "/abc",
       name: "abc",
-      component: () => import("../views/abc.vue"),
+      component: () =>
+        import("../views/abc.vue"),
     },
     {
       path: "/list",
-      component: () => import("../views/testPinia/List.vue"),
+      component: () =>
+        import(
+          "../views/testPinia/List.vue"
+        ),
     },
     {
       path: "/search",
-      component: () => import("../views/testPinia/Search.vue"),
+      component: () =>
+        import(
+          "../views/testPinia/Search.vue"
+        ),
     },
     {
-      path:"/photos",
-      name:"photos",
-      component:()=>import("../views/photos.vue")
+      path: "/photos",
+      name: "photos",
+      component: () =>
+        import("../views/photos.vue"),
     },
     {
-      path:"/testFloat",
-      name:"testFloat",
-      component:()=>import("../views/testFloat.vue")
+      path: "/testFloat",
+      name: "testFloat",
+      component: () =>
+        import(
+          "../views/testFloat.vue"
+        ),
     },
     {
-      path:"/lyrics",
-      name:"lyrics",
-      component:()=>import("../views/lyrics.vue")
+      path: "/lyrics",
+      name: "lyrics",
+      component: () =>
+        import("../views/lyrics.vue"),
     },
 
     {
-      path:"/login",
-      name:"login",
-      component:()=>import("../views/login.vue")
+      path: "/login",
+      name: "login",
+      component: () =>
+        import("../views/login.vue"),
     },
     {
-      path:"/iframe",
-      name:"iframe",
-      component:()=>import("../views/iframe.vue")
+      path: "/iframe",
+      name: "iframe",
+      component: () =>
+        import("../views/iframe.vue"),
     },
   ],
 });
 
 export default router;
-
-

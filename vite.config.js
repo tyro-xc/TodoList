@@ -14,6 +14,7 @@ export default defineConfig({
     allowedHosts:true
   },
   resolve: {
+    base: '/TodoList/',
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
