@@ -4,7 +4,7 @@ import {
   createWebHashHistory,
 } from "vue-router";
 // import Home from "@/components/Home.vue";
-import confetti from "../views/confetti.vue";
+import confetti from "../components/confetti.vue";
 
 const router = createRouter({
   history: createWebHashHistory(
@@ -21,7 +21,7 @@ const router = createRouter({
       name: "testColor",
       component: () =>
         import(
-          "../views/testColor.vue"
+          "../components/testColor.vue"
         ),
     },
     {
@@ -29,95 +29,95 @@ const router = createRouter({
       name: "testButton",
       component: () =>
         import(
-          "../views/testButton.vue"
+          "../components/testButton.vue"
         ),
     },
     {
       path: "/confetti",
       name: "confetti",
       component: () =>
-        import("../views/confetti.vue"),
+        import("../components/confetti.vue"),
     },
     {
       path: "/TodoList",
       name: "TodoList",
       component: () =>
-        import("../views/TodoList.vue"),
+        import("../components/TodoList.vue"),
     },
     {
       path: "/RandomGetName",
       name: "RandomGetName",
       component: () =>
         import(
-          "../views/RandomGetName.vue"
+          "../components/RandomGetName.vue"
         ),
     },
     {
       path: "/debounce",
       name: "debounce",
       component: () =>
-        import("../views/debounce.vue"),
+        import("../components/debounce.vue"),
     },
     {
       path: "/SearchGithubName",
       name: "SearchGithubName",
       component: () =>
         import(
-          "../views/SearchGithubName.vue"
+          "../components/SearchGithubName.vue"
         ),
     },
     {
       path: "/abc",
       name: "abc",
       component: () =>
-        import("../views/abc.vue"),
+        import("../components/abc.vue"),
     },
     {
       path: "/list",
       component: () =>
         import(
-          "../views/testPinia/List.vue"
+          "../components/testPinia/List.vue"
         ),
     },
     {
       path: "/search",
       component: () =>
         import(
-          "../views/testPinia/Search.vue"
+          "../components/testPinia/Search.vue"
         ),
     },
     {
       path: "/photos",
       name: "photos",
       component: () =>
-        import("../views/photos.vue"),
+        import("../components/photos.vue"),
     },
     {
       path: "/testFloat",
       name: "testFloat",
       component: () =>
         import(
-          "../views/testFloat.vue"
+          "../components/testFloat.vue"
         ),
     },
     {
       path: "/lyrics",
       name: "lyrics",
       component: () =>
-        import("../views/lyrics.vue"),
+        import("../components/lyrics.vue"),
     },
 
     {
       path: "/login",
       name: "login",
       component: () =>
-        import("../views/login.vue"),
+        import("../components/login.vue"),
     },
     {
       path: "/iframe",
       name: "iframe",
       component: () =>
-        import("../views/iframe.vue"),
+        import("../components/iframe.vue"),
     },
   ],
 });
