@@ -4,6 +4,7 @@
       <el-aside height="100vh">
         <el-scrollbar>
           <el-menu router>
+            <el-menu-item index="/welcome"> Welcome </el-menu-item>
             <el-menu-item index="/TodoList"> TodoList </el-menu-item>
             <el-menu-item index="/testButton"> testButton </el-menu-item>
             <el-menu-item index="/RandomGetName"> RandomGetName </el-menu-item>

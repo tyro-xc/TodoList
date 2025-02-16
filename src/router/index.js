@@ -4,7 +4,7 @@ import {
   createWebHashHistory,
 } from "vue-router";
 // import Home from "@/components/Home.vue";
-import confetti from "../components/confetti.vue";
+import confetti from "../components/welcome.vue";
 import Layout from "@/views/Layout.vue";
 
 const router = createRouter({
@@ -26,9 +26,9 @@ const router = createRouter({
           component: () => import("../components/testButton.vue"),
         },
         {
-          path: "/confetti",
-          name: "confetti",
-          component: () => import("../components/confetti.vue"),
+          path: "/welcome",
+          name: "welcome",
+          component: () => import("../components/welcome.vue"),
         },
         {
           path: "/TodoList",

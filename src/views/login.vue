@@ -64,7 +64,7 @@
       >
         <el-button
           type="primary"
-          @click="LoginHandler(loginData.username, loginData.password)"
+          @click="LoginHandler(loginData)"
         >
           Login
         </el-button>
@@ -90,6 +90,7 @@
 import { reactive, ref } from "vue";
 import { ElMessage } from "element-plus";
 import { useRouter } from "vue-router";
+import { userLoginService } from "@/API/userService";
 const router = useRouter();
 const isRegister = ref(false);
 const loginData = reactive({
@@ -105,16 +106,27 @@ const resetLoginData = () => {
 const RegisterHandler = () => {
   // ElMessage.al("submit")
   ElMessage.success("login success");
+  
 };
-const LoginHandler = (username, password) => {
-  if ("zhangsan" === username && "123456" === password) {
-    ElMessage.success("login Sucess");
+const LoginHandler = async (data) => {
+  const res = await userLoginService(data); 
+  if (res.code === 0) {
+    alert(res.msg?res.msg:"login success");
     router.push("/");
-  } else {
-    ElMessage.error("login fail");
-    resetLoginData();
+  }else{
+    alert(res.msg?res.msg:"login fail");
   }
-};
+
+}
+// const LoginHandler = () => {
+//   if ("zhangsan" === username && "123456" === password) {
+//     ElMessage.success("login Sucess");
+//     router.push("/");
+//   } else {
+//     ElMessage.error("login fail");
+//     resetLoginData();
+//   }
+// };
 
 const checkPassword = (rules, value, callback) => {
   if (value === "") {
