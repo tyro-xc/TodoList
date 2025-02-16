@@ -51,15 +51,15 @@ const router = createRouter({
         {
           path: "/abc",
           name: "abc",
-          component: () => import("../components/abc.vue"),
+          component: () => import("../views/testPinia/abc.vue"),
         },
         {
           path: "/list",
-          component: () => import("../components/testPinia/List.vue"),
+          component: () => import("../views/testPinia/List.vue"),
         },
         {
           path: "/search",
-          component: () => import("../components/testPinia/Search.vue"),
+          component: () => import("../views/testPinia/Search.vue"),
         },
         {
           path: "/photos",
