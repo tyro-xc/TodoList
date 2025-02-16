@@ -1,4 +1,4 @@
-import request from '@/utils/request.js'
+import request from '@/util/request.js'
 
 
 export function getAllUserService() {
@@ -10,5 +10,5 @@ export function userLoginService(loginData) {
     for(let key in loginData){
         params.append(key,loginData[key]); 
     }
-    return request.get('/login',params)
+    return request.post('/login',params)
   }

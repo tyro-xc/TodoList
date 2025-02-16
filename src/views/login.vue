@@ -62,10 +62,7 @@
       <el-form-item
         style="display: flex; justify-content: center; align-items: center"
       >
-        <el-button
-          type="primary"
-          @click="LoginHandler(loginData)"
-        >
+        <el-button type="primary" @click="LoginHandler(loginData)">
           Login
         </el-button>
         <el-button type="default" @click="resetLoginData">Reset</el-button>
@@ -106,18 +103,17 @@ const resetLoginData = () => {
 const RegisterHandler = () => {
   // ElMessage.al("submit")
   ElMessage.success("login success");
-  
 };
 const LoginHandler = async (data) => {
-  const res = await userLoginService(data); 
+  const res = await userLoginService(data);
   if (res.code === 0) {
-    alert(res.msg?res.msg:"login success");
+    // alert();
+    ElMessage.success(res.msg ? res.msg : "login success");
     router.push("/");
-  }else{
-    alert(res.msg?res.msg:"login fail");
+  } else {
+    alert(res.msg ? res.msg : "login fail");
   }
-
-}
+};
 // const LoginHandler = () => {
 //   if ("zhangsan" === username && "123456" === password) {
 //     ElMessage.success("login Sucess");
@@ -175,7 +171,7 @@ h3 {
 .container {
   height: 100%;
   /* background-color: #bbb; */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .demo-ruleForm {

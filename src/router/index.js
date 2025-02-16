@@ -1,10 +1,4 @@
-import {
-  createRouter,
-  createWebHistory,
-  createWebHashHistory,
-} from "vue-router";
-// import Home from "@/components/Home.vue";
-import confetti from "../components/welcome.vue";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Layout from "@/views/Layout.vue";
 
 const router = createRouter({
@@ -15,6 +9,10 @@ const router = createRouter({
       name: "Layout",
       component: Layout,
       children: [
+        {
+          path: "",
+          redirect: "/welcome",
+        },
         {
           path: "/testColor",
           name: "testColor",
@@ -85,10 +83,10 @@ const router = createRouter({
           component: () => import("../components/iframe.vue"),
         },
         {
-          path:"/table",
-          name:"table",
-          component:()=>import("../components/table.vue")
-        }
+          path: "/table",
+          name: "table",
+          component: () => import("../components/table.vue"),
+        },
       ],
     },
     {

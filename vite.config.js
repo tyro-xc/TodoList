@@ -11,7 +11,16 @@ export default defineConfig({
     vueDevTools(),
   ],
   server:{
-    allowedHosts:true
+    allowedHosts:true,
+    proxy:{
+      '/api':{
+        target:'http://localhost:8080',
+        changeOrigin:true,
+        // secure:false,
+        // ws:true,
+        rewrite:(path)=>path.replace(/^\/api/,'')
+      } 
+    }
   },
   resolve: {
     base: '/TodoList/',
