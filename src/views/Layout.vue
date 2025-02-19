@@ -20,6 +20,7 @@
               <el-menu-item index="/search">search</el-menu-item>
               <el-menu-item index="list">list</el-menu-item>
             </el-sub-menu>
+            <el-menu-item index="/progressBar">progressBar</el-menu-item>
             <el-menu-item index="/photos"> photos</el-menu-item>
             <el-menu-item index="/testFloat"> testFloat</el-menu-item>
             <el-menu-item index="/lyrics"> lyrics</el-menu-item>
@@ -40,7 +41,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted } from "vue";
 import { getCurrentTime } from "@/util/time.js";
 const time = ref(getCurrentTime());
 

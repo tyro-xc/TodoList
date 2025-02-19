@@ -11,6 +11,7 @@ const router = createRouter({
       children: [
         {
           path: "",
+          name: "welcome",
           redirect: "/welcome",
         },
         {
@@ -53,12 +54,15 @@ const router = createRouter({
           name: "abc",
           component: () => import("../views/testPinia/abc.vue"),
         },
+        
         {
           path: "/list",
+          name: "list",
           component: () => import("../views/testPinia/List.vue"),
         },
         {
           path: "/search",
+          name: "search",
           component: () => import("../views/testPinia/Search.vue"),
         },
         {
@@ -87,6 +91,11 @@ const router = createRouter({
           name: "table",
           component: () => import("../components/table.vue"),
         },
+        {
+          path:"/progressBar",
+          name:"progressBar",
+          component:()=>import("../components/progressBar.vue")
+        }
       ],
     },
     {

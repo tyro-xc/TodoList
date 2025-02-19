@@ -1,5 +1,4 @@
 <script setup>
-import Home from "./views/Layout.vue";
 </script>
 
 <template>
