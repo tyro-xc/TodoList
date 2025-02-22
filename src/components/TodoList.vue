@@ -44,7 +44,6 @@ const clearAllTodo = function () {
     });
   }
 };
-
 watch(
   todos,
   (newTodos) => {
