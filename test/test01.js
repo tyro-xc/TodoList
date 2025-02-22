@@ -33,4 +33,5 @@ function abs() {
     let x = arguments[0];
     return x >= 0 ? x : -x;
 }
-console.log(abs(1,2,3));
+console.log(abs());
+
