@@ -20,24 +20,6 @@ let progressBar = null;
 let progressNum = null;
 let x, y;
 
-window.addEventListener("mousemove", (e) => {
-  x = e.clientX;
-  y = e.clientY;
-    //   console.log(123);
-
-});
-function updateProgressBar() {
-  if (progressSection && progressBar && progressNum) {
-    progressSection.style.transform = "translateX(" + x + "px," + y + "px)";
-    progressBar.style.height = getScrollPercentange() + "%";
-    progressNum.innerText = Math.floor(getScrollPercentange()) + "%";
-    requestAnimationFrame(updateProgressBar);
-  }
-}
-function getScrollPercentange() {
-  return window.scrollY / document.body.scrollHeight - window.innerHeight / 100;
-}
-
 onMounted(() => {
   progressSection = document.querySelector(".progress-section");
   progressBar = document.querySelector(".progress-bar");
@@ -45,7 +27,25 @@ onMounted(() => {
   updateProgressBar();
 });
 
-
+window.addEventListener("mousemove", (e) => {
+  x = e.clientX;
+  y = e.clientY;
+  // console.log(123);
+});
+function updateProgressBar() {
+  if (progressSection && progressBar && progressNum) {
+    progressSection.style.transform = "translateX(" + x + "px," + y + "px)";
+    progressBar.style.height = `${getScrollPercentage()}%`;
+    progressNum.innerText = getScrollPercentage() + "%";
+    requestAnimationFrame(updateProgressBar);
+    // console.log(getScrollPercentage());
+  }
+}
+function getScrollPercentage() {
+  return Math.ceil(
+    (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+  );
+}
 </script>
 
 <style scoped>
@@ -53,11 +53,13 @@ onMounted(() => {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Electrolize", "sans-serif"; */
+  font-family: "Agency FB";
+  font-size: 1.3rem;
 }
 .container {
+  height: 4000px;
   overscroll-behavior-y: none;
-  background-color: #101010 !important;
+  background-color: #161616 !important;
   color: white;
 }
 .progress-section {
@@ -99,10 +101,10 @@ section {
   font-size: 3rem;
 }
 body::-webkit-scrollbar {
-    display: none  !important;
+  display: none !important;
 }
 html {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 </style>
