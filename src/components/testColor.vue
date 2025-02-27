@@ -13,17 +13,18 @@ const numB = ref(0);
   B:<input type="range" v-model="numB" max="255" /><button>{{ numB }}</button
   ><br />
 
-  <div
-    style="
-      width: 100px;
-      height: 100px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    "
-    :style="{ backgroundColor: `rgb(${numR},${numG},${numB})` }"
-  >
-    123
-  </div>
+  <div :style="{ backgroundColor: `rgb(${numR},${numG},${numB})` }">123</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+div:hover {
+  border-radius: 50px;
+}
+</style>
